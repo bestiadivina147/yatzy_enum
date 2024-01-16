@@ -24,7 +24,8 @@ class Yatzy:
     @staticmethod
     def ones(*dice):
         ONE = Pips.ONE.value
-        return dice.count(ONE) * ONE
+        sum_ones = sum(filter(lambda x: x == ONE, dice))
+        return sum_ones
 
     @staticmethod
     def twos(*dice):

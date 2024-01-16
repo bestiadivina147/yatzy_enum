@@ -32,11 +32,12 @@ class Yatzy:
         TWO = Pips.TWO.value
         sum_twos = sum(filter(lambda x: x == TWO, dice))
         return sum_twos
-
+    # Utilice las funciones filter y lambda
     @staticmethod
     def threes(*dice):
         THREE = Pips.THREE.value
-        return dice.count(THREE) * THREE
+        sum_threes = sum(filter(lambda x: x == THREE, dice))
+        return sum_threes
 
     def fours(self):
         return self.__sum_dice_equals(Pips.FOUR.value)

@@ -20,17 +20,18 @@ class Yatzy:
     @staticmethod
     def yatzy(*dice):
         return Yatzy.FIFTY if len(set(dice)) == 1 else Yatzy.ZERO
-
+    # Utilice las funciones filter y lambda
     @staticmethod
     def ones(*dice):
         ONE = Pips.ONE.value
         sum_ones = sum(filter(lambda x: x == ONE, dice))
         return sum_ones
-
+    # Utilice las funciones filter y lambda
     @staticmethod
     def twos(*dice):
         TWO = Pips.TWO.value
-        return dice.count(TWO) * TWO
+        sum_twos = sum(filter(lambda x: x == TWO, dice))
+        return sum_twos
 
     @staticmethod
     def threes(*dice):
